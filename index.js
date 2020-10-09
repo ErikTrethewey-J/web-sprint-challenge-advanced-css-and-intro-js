@@ -284,19 +284,18 @@ bio: Add 1-2 sentences (or use lorem ipsum)
 
 At the end, this function should return the new array with information added"*/
 
-function addArtist(array){
+function addArtist(array, id, name, years, genre, nationality, bio){
 array.push({
-  "id": "20",
-  "name": "Erik", 
-  "years": "1990 - 2020",
-  "genre": "Web Design",
-  "nationality": "American",
-  "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ante velit, rhoncus vitae facilisis eu, eleifend et augue. Fusce euismod eros elementum elit convallis consectetur. Quisque in dictum tellus."
-}
-)
+  id,
+  name,
+  years,
+  genre,
+  nationality,
+  bio
+})
 return array;
   }
-  console.log(addArtist(artists))
+  console.log(addArtist(artists, "20", "Erik", "1990-2020", "Contemperary", "Americans", "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ante velit, rhoncus vitae facilisis eu, eleifend et augue. Fusce euismod eros elementum elit convallis consectetur. Quisque in dictum tellus. Sed mollis justo vel lobortis dapibus. "))
 
 /* Task 7: Create a function called lotsOfArt() that takes one argument: 
 
@@ -353,3 +352,7 @@ function randomize(/* Code here */){
 
 
  /* STRETCH 3: Use advanced array methods (.map, .reduce, .filer) to refactor your MVP code (create an array of all artists born in the 1900s with .filter, for example) */
+ const array = artists.filter((item) => {
+  return item.years === '1900';
+})
+console.log(array);
