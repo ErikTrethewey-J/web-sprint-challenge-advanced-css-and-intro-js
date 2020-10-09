@@ -313,14 +313,6 @@ const result = artists.filter((item) => {
   console.log(result);
 
 
-// function lotsOfArt(array){
-//   let newArray = [];
-//         array.paintings >= 100
-//         array.push(newArray);
-//         return newArray;
-//       }
-// console.log(lotsOfArt(artists));
-
 // 🎨🎨 STRETCH 🎨🎨//
 
 
