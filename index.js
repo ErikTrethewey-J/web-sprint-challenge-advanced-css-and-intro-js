@@ -224,11 +224,11 @@ console.log(artists[8].name);
  * For example, if getArtistByIndex is invoked with the artists dataset and the number 0,
  * it will return `The artist at index 0 is Amedeo Modigliani`.
 */
-function getArtistByIndex(array, index) {
-    /* code here */
-    return `The artist at index ${array[index].id} is ${array[index].name}`
-  }
-  console.log(getArtistByIndex(artists, 5))
+// function getArtistByIndex(array, index) {
+//     /* code here */
+//     return `The artist at index ${array[index].id} is ${array[index].name}`
+//   }
+//   console.log(getArtistByIndex(artists, 5))
   /**
 
 
@@ -287,10 +287,10 @@ At the end, this function should return the new array with information added"*/
 function addArtist(array){
 array.push({
   "id": "20",
-  "name": "Erik," 
-  "years": "1990 - 2020,"
-  "genre": "Web Design," 
-  "nationality": "American"
+  "name": "Erik", 
+  "years": "1990 - 2020",
+  "genre": "Web Design",
+  "nationality": "American",
   "bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ante velit, rhoncus vitae facilisis eu, eleifend et augue. Fusce euismod eros elementum elit convallis consectetur. Quisque in dictum tellus."
 }
 )
@@ -306,17 +306,20 @@ and returns an array with names of artists who painted more than 100 paintings.
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ..."Albrecht Dürer"]*/
 
-function lotsOfArt(array){
-let newArray = [];
-  for(let i = 0; i < array.length; i++);
-    if (array.paintings >= 100){
-      const newArray = array[i].name;
-      return array.name;
-    }
+const result = artists.filter((item) => {
+  return item.paintings >= 100;
+}).map(x => x.name);
 
-}
+  console.log(result);
 
-console.log(lotsOfArt(artists))
+
+// function lotsOfArt(array){
+//   let newArray = [];
+//         array.paintings >= 100
+//         array.push(newArray);
+//         return newArray;
+//       }
+// console.log(lotsOfArt(artists));
 
 // 🎨🎨 STRETCH 🎨🎨//
 
